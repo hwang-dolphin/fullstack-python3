@@ -13,6 +13,9 @@ body{
 	background-color: #80bdec;
 	font-size: 16px;
 
+	width:100vh;
+	height:100vw;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
