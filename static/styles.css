@@ -13,7 +13,7 @@ body{
 	background-color: #80bdec;
 	font-size: 16px;
 
-	height:100vw;
+	height:100vh;
 
 	display: flex;
 	justify-content: center;
@@ -39,6 +39,7 @@ body{
 .card
 {
 	background-color:hsl(15, 100%, 70%);
+	
 	width: 44vw;
 	height: 59vh;
 
