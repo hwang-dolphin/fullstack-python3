@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
+
+@app.route("/blog")
+def get_blog():
+	return render_template("blog.html")
 # app.run(debug=True)
 
 
