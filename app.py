@@ -12,6 +12,10 @@ def hello():
 @app.route("/blog")
 def get_blog():
 	return render_template("blog.html")
+
+@app.route("/hello")
+def get_hello():
+    return "hello backend flask"
 # app.run(debug=True)
 
 
