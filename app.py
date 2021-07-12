@@ -15,7 +15,7 @@ def get_blog():
 
 @app.route("/hello")
 def get_hello():
-    return {"message":["hello backend flask"],"status":"success"}
+    return {"message":["hello world from flask"],"status":"success"}
 # app.run(debug=True)
 
 
