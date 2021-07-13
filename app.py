@@ -13,6 +13,10 @@ def hello():
 def get_blog():
 	return render_template("blog.html")
 
+@app.route("/test")
+def test():
+    return "test"
+
 @app.route("/hello")
 def get_hello():
     return {"message":["hello world from flask"],"status":"success"}
