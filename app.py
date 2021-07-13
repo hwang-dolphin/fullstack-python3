@@ -1,7 +1,5 @@
 # save this as app.py
 from flask import (Flask, render_template)
-import logging
-
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
@@ -17,7 +15,6 @@ def get_blog():
 
 @app.route("/test")
 def test():
-	app.logger.info('testing')
     return "test"
 
 @app.route("/hello")
