@@ -22,7 +22,7 @@ def get_hello():
     return {"message":["hello world from flask"],"status":"success"}
 
 
-@app.route('/api/name')
+@app.route('https://fullstack-python3.herokuapp.com/api/name')
 def name():
 	headers = request.headers
 	auth = headers["x-api-key"]
