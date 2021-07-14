@@ -1,13 +1,11 @@
 # save this as app.py
-from flask import (Flask, render_template)
+from flask import (Flask, request, render_template)
 import sys
-from flask_cors import CORS
+# from flask_cors import CORS
 
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
-cors = CORS(app, resources={r"/api/name":{"origins":["https://fullstack-python3.herokuapp.com"]}})
-
 
 @app.route("/")
 def hello():
@@ -29,8 +27,6 @@ def get_hello():
 
 @app.route('/api/name')
 def name():
-	print('hello', file=sys.stderr)
-
 	headers = request.headers
 	auth = headers["x-api-key"]
 	# auth = headers.get("x-api-key")∏
@@ -42,10 +38,10 @@ def name():
 		return "Sorry, closed"
 	#jsonify({'color':'Hello World!'})
 
-
-
-
-# app.run(debug=True)
+"""
+if __name__ == '__main__':
+	app.run(debug=True)
+"""
 
 
 
