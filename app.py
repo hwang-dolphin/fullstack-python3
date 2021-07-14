@@ -1,5 +1,6 @@
 # save this as app.py
 from flask import (Flask, render_template)
+import sys
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
@@ -22,8 +23,10 @@ def get_hello():
     return {"message":["hello world from flask"],"status":"success"}
 
 
-@app.route('https://fullstack-python3.herokuapp.com/api/name')
+@app.route('/api/name')
 def name():
+	print('hello', file=sys.stderr)
+
 	headers = request.headers
 	auth = headers["x-api-key"]
 	# auth = headers.get("x-api-key")∏
