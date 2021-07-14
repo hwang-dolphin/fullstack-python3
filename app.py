@@ -20,6 +20,24 @@ def test():
 @app.route("/hello")
 def get_hello():
     return {"message":["hello world from flask"],"status":"success"}
+
+
+@app.route('/api/name')
+def name():
+	headers = request.headers
+	auth = headers["x-api-key"]
+	# auth = headers.get("x-api-key")∏
+
+	if auth == 'secretkey':
+		return "Welcome, Hello World"
+
+	else:
+		return "Sorry, closed"
+	#jsonify({'color':'Hello World!'})
+
+
+
+
 # app.run(debug=True)
 
 
