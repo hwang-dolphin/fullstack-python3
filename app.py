@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
-cors = CORS(app, resources={r"/api/name":{"origins":["http://localhostt:3000","https://fullstack-python3.herokuapp.com/"]}})
+cors = CORS(app, resources={r"/api/name":{"origins":["https://fullstack-python3.herokuapp.com"]}})
 
 
 @app.route("/")
