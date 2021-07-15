@@ -18,6 +18,7 @@
 	--lightGrayishBlueToggle: hsl(223, 50%, 87%);
 	--grayishBlue: hsl(225, 20%, 60%);
 	--darkDesaturatedBlue: hsl(227, 35%, 25%);
+	--darkWhite: #f2f2f2;
 }
 
 html{
@@ -28,6 +29,6 @@ body{
 		
 	height: 100vh;
 	font-size: 16px;
-	color: blue;
-	background-color: orange;
+	color: black;
+	background-color: var(--darkWhite);
 }

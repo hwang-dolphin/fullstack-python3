@@ -12,18 +12,11 @@ def hello():
     #return render_template("index.html")
 	return app.send_static_file('index.html')
 
+"""
 @app.route("/blog")
 def get_blog():
 	return render_template("blog.html")
-
-@app.route("/test")
-def test():
-    return "test"
-
-@app.route("/hello")
-def get_hello():
-    return {"message":["hello world from flask"],"status":"success"}
-
+"""
 
 @app.route('/api/name')
 def name():
