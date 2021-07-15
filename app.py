@@ -32,10 +32,10 @@ def name():
 	# auth = headers.get("x-api-key")∏
 
 	if auth == 'secretkey':
-		return {"message":"Welcome, Hello World"}
+		return {"message":["Welcome, Hello World"]}
 
 	else:
-		return {"message":"Sorry, closed"}
+		return {"message":["Sorry, closed"]}
 	#jsonify({'color':'Hello World!'})
 
 """
