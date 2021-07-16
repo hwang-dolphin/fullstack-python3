@@ -15,8 +15,13 @@ def home():
 
 @app.route("/about")
 def about():
-	return "about"
+	return "aaaabbbbbouuuuttttt"
 	
+
+@app.route("/contact")
+def contact():
+	return "cccccontactoooo"
+
 
 """
 @app.route("/blog")
