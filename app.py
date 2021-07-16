@@ -15,7 +15,7 @@ def home():
 
 @app.route("/about")
 def about():
-	return "aaaabbbbbouuuuttttt"
+	return {'time': 'Good Job'}
 	
 
 @app.route("/contact")
