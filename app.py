@@ -15,12 +15,12 @@ def home():
 
 @app.route("/about")
 def about():
-	return {'time': 'Good Job'}
+	return {'time': 'AA About AA'}
 	
 
 @app.route("/contact")
 def contact():
-	return "cccccontactoooo"
+    return {'time': 'CC Contacto CC'}
 
 
 """
