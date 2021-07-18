@@ -14,7 +14,7 @@ def home():
 
 
 
-"""
+
 @app.route("/about")
 def about():
 	return {'time': 'AA About AA'}
@@ -23,7 +23,7 @@ def about():
 @app.route("/contact")
 def contact():
     return {'time': 'CC Contacto CC'}
-"""
+
 
 
 
