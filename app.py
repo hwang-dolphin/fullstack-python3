@@ -17,12 +17,12 @@ def home():
 
 @app.route("/about")
 def about():
-	return {'time': 'AA About AA'}
+	return {'time': 'about api working'}
 	
 
 @app.route("/contact")
 def contact():
-    return {'time': 'CC Contacto CC'}
+    return {'time': 'contact api working'}
 
 
 
