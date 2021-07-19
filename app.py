@@ -1,5 +1,7 @@
 # save this as app.py
 from flask import (Flask, request, render_template)
+import os
+
 import sys
 # from flask_cors import CORS
 
@@ -47,6 +49,8 @@ def name():
 		return {"message":["Sorry, closed"]}
 	#jsonify({'color':'Hello World!'})
 
+
+# run code only for development, not production
 """
 if __name__ == '__main__':
 	app.run(debug=True)
