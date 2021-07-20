@@ -11,13 +11,11 @@ app = Flask(__name__, static_folder='build', static_url_path='/')
 
 @app.route("/")
 def home():
+	return app.send_static_file('index.html')
+
     # this one doesn't work
 	#return render_template("index.html")
 	
-	return app.send_static_file('index.html')
-
-
-
 
 @app.route("/about")
 def about():
@@ -27,8 +25,6 @@ def about():
 @app.route("/contact")
 def contact():
     return {'time': 'contact api working'}
-
-
 
 
 
