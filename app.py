@@ -12,7 +12,7 @@ import jwt
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
-cors = CORS(app, resources={r"/about":{"origins":[*]}})
+#cors = CORS(app, resources={r"/about":{"origins":[*]}})
 app.config['SECRET_KEY'] = 'JustDemonstrating'
 
 """
@@ -108,10 +108,10 @@ def name():
 
 
 # run code only for development, not production
-"""
-if __name__ == '__main__':
-	app.run(debug=True)
-"""
+
+#if __name__ == '__main__':
+#	app.run(debug=True)
+
 """
 https://www.youtube.com/watch?v=e-_tsR0hVLQ
 Intermediate Flask Tutorial: Implementing JSON Web Tokens (JWT)
