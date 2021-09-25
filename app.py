@@ -1,13 +1,72 @@
 # save this as app.py
-from flask import (Flask, request, render_template)
+from flask import (Flask, request, render_template, jsonify)
 import os
 
 import sys
-# from flask_cors import CORS
+from flask_cors import CORS
+
+from functools import wraps
+import datetime
+import jwt
 
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
+cors = CORS(app, resources={r"/about":{"origins":[*]}})
+app.config['SECRET_KEY'] = 'JustDemonstrating'
+
+"""
+def check_for_token(func):
+	@wraps(func)
+	def wrapped(**args, **kwargs):
+		token = request.args.get('token')
+
+		if not token:
+			return jsonify({'message': 'Missing token'}), 403
+
+
+		try:
+			data = jwt.decode(token, app.config['SECRET_KEY'])
+		
+		except:
+			return jsonify({'message': 'Invalid token'}), 403
+
+		return func(*args, **kwargs)
+	return wrapped
+			
+
+@app.route("/protected")
+def protected():
+	if not session.get('logged_in'):
+		return "not logged in"
+
+	else:
+		return "currently logged in"
+
+
+@app.route("/public")
+def public():
+	return "anyone can view this"
+
+
+@app.route("/auth")
+@check_for_token
+def authorized():
+	return "This is only viewable with a token"
+"""
+
+@app.route("/login")
+def login():
+	token = jwt.encode({
+		'user': 'robert',
+		'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=60)
+
+	},
+
+	app.config['SECRET_KEY'])
+
+	return jsonify({'token': token})
+
 
 @app.route("/")
 def home():
@@ -53,6 +112,8 @@ def name():
 if __name__ == '__main__':
 	app.run(debug=True)
 """
-
-
-
+"""
+https://www.youtube.com/watch?v=e-_tsR0hVLQ
+Intermediate Flask Tutorial: Implementing JSON Web Tokens (JWT)
+Live Python 
+"""
