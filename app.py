@@ -91,7 +91,7 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
-		payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
 
         return {'time': 'security is working'}
 
@@ -122,8 +122,8 @@ def name():
 
 # run code only for development, not production
 
-#if __name__ == '__main__':
-#    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 """
 https://www.youtube.com/watch?v=e-_tsR0hVLQ
