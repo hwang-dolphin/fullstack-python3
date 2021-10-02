@@ -91,7 +91,9 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
-        return {'time': customHeader}
+		payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+
+        return {'time': payload}
 
     else:
         return {'time': 'security api not working'}
@@ -128,3 +130,5 @@ https://www.youtube.com/watch?v=e-_tsR0hVLQ
 Intermediate Flask Tutorial: Implementing JSON Web Tokens (JWT)
 Live Python 
 """
+
+# reference: https://medium.com/@apcelent/json-web-token-tutorial-with-example-in-python-df7dda73b579
