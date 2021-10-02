@@ -91,7 +91,7 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
-        return {'time': 'security api working'}
+        return {'time': customHeader}
 
     else:
         return {'time': 'security api not working'}
