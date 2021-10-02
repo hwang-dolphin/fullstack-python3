@@ -89,12 +89,12 @@ def contact():
 
 @app.route("/security")
 def security():
- #   if 'Authorization' in request.headers:
- #       customHeader = request.headers['Authorization']
- #       return {'time': 'security api working'}
+    if 'Authorization' in request.headers:
+        customHeader = request.headers['Authorization']
+        return {'time': 'security api working'}
 
- #   else:
-    return {'time': 'security api not working'}
+    else:
+        return {'time': 'security api not working'}
 
 
 
