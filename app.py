@@ -93,7 +93,7 @@ def security():
         customHeader = request.headers['Authorization']
 		payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
 
-        return {'time': payload}
+        return {'time': 'security is working'}
 
     else:
         return {'time': 'security api not working'}
