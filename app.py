@@ -97,9 +97,9 @@ def security():
 
         jwtToken = customHeader.split(" ")
         
-        jwt.decode(jwtToken[1], "secret", algorithms=['HS256'])
+        decoded = jwt.decode(jwtToken[1], "secret", algorithms=['HS256'])
 
-        return {'time': 'security is working'}
+        return {'time': decoded}
 
     else:
         return {'time': 'security api not working'}
