@@ -91,7 +91,7 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
-        payload = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        payload = jwt.decode(customHeader, app.config['SECRET_KEY'], algorithms=['HS256'])
 
         return {'time': 'security is working'}
 
