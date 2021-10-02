@@ -99,7 +99,7 @@ def security():
         
         decoded = jwt.decode(jwtToken[1], "secret", algorithms=['HS256'])
 
-        return {'time': decoded}
+        return {'time': decoded.user}
 
     else:
         return {'time': 'security api not working'}
