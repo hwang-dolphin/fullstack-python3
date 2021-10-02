@@ -57,19 +57,16 @@ def authorized():
 
 @app.route("/login")
 def login():
-	"""
+
 	token = jwt.encode({
 		'user': 'robert',
 		'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=60)
 
 	},
 
-	app.config['SECRET_KEY'])
-    """
-    token = jwt.encode({
-        'user': 'robert',
-        'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=60)
-	}, "secret", algorithm="HS256")
+	#app.config['SECRET_KEY'])
+   
+    "secret", algorithm="HS256")
 
 	return jsonify({'token': token})
 
