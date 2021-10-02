@@ -89,12 +89,12 @@ def contact():
 
 @app.route("/security")
 def security():
-    if 'Authorization' in request.headers:
-        customHeader = request.headers['Authorization']
-        return {'time': 'security api working'}
+ #   if 'Authorization' in request.headers:
+ #       customHeader = request.headers['Authorization']
+ #       return {'time': 'security api working'}
 
-    else:
-        return {'time': 'security api not working'}
+ #   else:
+    return {'time': 'security api not working'}
 
 
 
@@ -121,7 +121,7 @@ def name():
 # run code only for development, not production
 
 #if __name__ == '__main__':
-#	app.run(debug=True)
+#    app.run(debug=True)
 
 """
 https://www.youtube.com/watch?v=e-_tsR0hVLQ
