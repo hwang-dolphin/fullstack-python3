@@ -94,6 +94,10 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
+		
+        if customHeader is None:
+            return {'time': 'token not found'}
+
 
         jwtToken = customHeader.split(" ")
         
