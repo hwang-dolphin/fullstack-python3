@@ -94,16 +94,17 @@ def contact():
 def security():
     if 'Authorization' in request.headers:
         customHeader = request.headers['Authorization']
-		
-        if customHeader is None:
-            return {'time': 'token not found'}
-
-
+      	
         jwtToken = customHeader.split(" ")
         
-        decoded = jwt.decode(jwtToken[1], "secret", algorithms=['HS256'])
+        try:
+            decoded = jwt.decode(jwtToken[1], "secret", algorithms=['HS256'])
 
-        #print(decoded["user"])
+        except:
+            return {'time': 'no token found'}
+ 
+
+       #print(decoded["user"])
         return {'time': decoded["user"]}
 
     else:
