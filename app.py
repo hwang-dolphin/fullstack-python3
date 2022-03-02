@@ -125,7 +125,7 @@ def name():
 	# auth = headers.get("x-api-key")∏
 
 	if auth == 'secretkey':
-		return {"message":["Good Morning 99!"]}
+		return {"message":["New Good Morning!"]}
 
 	else:
 		return {"message":["Sorry, closed"]}
