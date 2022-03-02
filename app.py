@@ -125,7 +125,7 @@ def name():
 	# auth = headers.get("x-api-key")∏
 
 	if auth == 'secretkey':
-		return {"message":["Good Morning!"]}
+		return {"message":["Good Morning 22!"]}
 
 	else:
 		return {"message":["Sorry, closed"]}
@@ -144,3 +144,5 @@ Live Python
 """
 
 # reference: https://medium.com/@apcelent/json-web-token-tutorial-with-example-in-python-df7dda73b579
+
+# https://fullstack-python3.herokuapp.com/api/name
