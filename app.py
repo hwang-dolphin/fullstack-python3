@@ -12,8 +12,8 @@ import jwt
 
 # app = Flask(__name__)
 app = Flask(__name__, static_folder='build', static_url_path='/')
-# cors = CORS(app, resources={r"/*":{"origins":"*"}})
-cors = CORS(app, resources={r"/*":{"origins":["https://www.hwangtech.com","http://portalmanager.zonicdesign.com"]}})
+cors = CORS(app, resources={r"/*":{"origins":"*"}})
+#cors = CORS(app, resources={r"/*":{"origins":["https://www.hwangtech.com","http://portalmanager.zonicdesign.com"]}})
 
 app.config['SECRET_KEY'] = 'JustDemonstrating'
 
