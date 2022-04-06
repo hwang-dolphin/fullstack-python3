@@ -130,7 +130,8 @@ def name():
 		return {"message":["New Good Morning!"]}
 
 	else:
-		return {"message":[auth]}
+		return {"message":["Closed"]}
+		#return {"message":[auth]}
 	#jsonify({'color':'Hello World!'})
 
 
