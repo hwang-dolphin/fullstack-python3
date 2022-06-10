@@ -1,3 +1,3 @@
-# Python3 using Flask and HTML, CSS, JavaScript uploaded to Heroku.
+# Fullstack with Python3 and ReactJs uploaded to Heroku.
 
-# 
+# https://fullstack-python3.herokuapp.com/
