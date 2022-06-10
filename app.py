@@ -83,12 +83,12 @@ def home():
 
 @app.route("/about")
 def about():
-	return {'time': 'about api working'}
+	return {'time': 'Good job, about api working!'}
 	
 
 @app.route("/contact")
 def contact():
-    return {'time': 'contact api working'}
+    return {'time': 'Good job, contact api working!'}
 
 
 
