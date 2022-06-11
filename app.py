@@ -88,7 +88,8 @@ def about():
 
 @app.route("/contact")
 def contact():
-    return {'time': 'Good job, contact api working!'}
+    result = [{"time":"Good job, contact api working!"}]
+    return jsonify(result)
 
 
 
